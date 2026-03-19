@@ -1,0 +1,373 @@
+/* Global design variables for a formal and soft academic look */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f3f7f5;
+  --surface: #ffffff;
+  --surface-soft: #e8f0ec;
+  --accent: #3f6f66;
+  --accent-strong: #2b544d;
+  --text: #223430;
+  --muted: #5a6f69;
+  --line: #cfddd7;
+  --success: #2f7d5e;
+  --shadow: 0 12px 30px rgba(32, 62, 55, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #dbeae4 0%, #f3f7f5 42%, #fbfdfc 100%);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #294f47;
+}
+
+.page-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.site-nav {
+  backdrop-filter: blur(6px);
+  background: rgba(240, 246, 243, 0.95);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-title {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: #2f4d46;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  transition: all 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: #dcebe6;
+  color: #254940;
+}
+
+.navbar-toggler {
+  border-color: #a8c0b8;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(63, 111, 102, 0.15);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2837,73,64,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.hero {
+  padding: 4.5rem 0 2.5rem;
+}
+
+.hero h1,
+.page-heading h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.85rem, 4vw, 2.8rem);
+  color: #1f3a34;
+  margin-bottom: 0.7rem;
+}
+
+.hero .lead,
+.page-heading p {
+  font-size: 1.08rem;
+  color: #4f6761;
+}
+
+.badge-soft {
+  display: inline-block;
+  background: #d7e8e2;
+  color: #2b544d;
+  border: 1px solid #bdd7ce;
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+}
+
+.soft-card {
+  background: linear-gradient(170deg, #ffffff 0%, #edf5f1 100%);
+  border: 1px solid #caddd5;
+  border-radius: 14px;
+  padding: 1rem;
+  height: 100%;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.soft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(43, 84, 77, 0.12);
+}
+
+.section-title {
+  font-family: 'Lora', serif;
+  font-size: 1.55rem;
+  color: #2d4d47;
+  margin-bottom: 0.8rem;
+}
+
+.sub-title {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  color: #395d56;
+  margin-bottom: 0.5rem;
+}
+
+.code-box {
+  background: #1a2f2b;
+  color: #dceee8;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #35524b;
+  overflow-x: auto;
+  font-size: 0.92rem;
+}
+
+.preview-box {
+  background: #fbfdfc;
+  border: 1px dashed #bed1c9;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.timeline-item {
+  border-left: 3px solid #9fc1b7;
+  padding-left: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.fact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.fact {
+  background: var(--surface-soft);
+  border: 1px solid #ccddd6;
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.fact strong {
+  display: block;
+  color: #2f5a52;
+}
+
+.project-demo {
+  border: 1px solid #c6d9d1;
+  border-radius: 12px;
+  background: #f8fcfa;
+  padding: 0.9rem;
+}
+
+.btn-academic {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-academic:hover {
+  background: var(--accent-strong);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.inline-note {
+  background: #edf6f2;
+  border: 1px solid #ccddd5;
+  border-radius: 9px;
+  padding: 0.65rem 0.85rem;
+  color: #3f6159;
+  font-size: 0.95rem;
+}
+
+.form-control,
+.form-control:focus {
+  border-color: #c5d8d0;
+  box-shadow: none;
+}
+
+.alert-soft {
+  display: none;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+
+.alert-soft.success {
+  display: block;
+  background: #e3f4ee;
+  border: 1px solid #b8e0d3;
+  color: #1b6655;
+}
+
+.alert-soft.error {
+  display: block;
+  background: #fcecec;
+  border: 1px solid #f3c5c5;
+  color: #7c2f2f;
+}
+
+.site-footer {
+  background: #e9f1ed;
+  border-top: 1px solid #ccddd5;
+  color: #48645e;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.long-section {
+  padding-bottom: 3rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+
+.study-list li {
+  margin-bottom: 0.5rem;
+}
+
+.compact-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f8fcfa;
+  border: 1px solid #c6d8d1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.compact-table th,
+.compact-table td {
+  border: 1px solid #cfe0d8;
+  padding: 0.55rem;
+  text-align: left;
+}
+
+.compact-table th {
+  background: #deece7;
+  color: #2b544d;
+}
+
+@media (max-width: 991px) {
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .panel,
+  .soft-card {
+    padding: 1rem;
+  }
+
+  .hero .lead,
+  .page-heading p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 3.6rem;
+  }
+
+  .navbar-nav {
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    line-height: 1.6;
+  }
+
+  .hero {
+    padding: 3.2rem 0 1.8rem;
+  }
+
+  .hero h1,
+  .page-heading h1 {
+    font-size: 1.58rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .sub-title {
+    font-size: 1.04rem;
+  }
+
+  .panel,
+  .soft-card,
+  .project-demo {
+    padding: 0.85rem;
+  }
+
+  .code-box {
+    font-size: 0.82rem;
+    padding: 0.75rem;
+  }
+
+  .site-footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
